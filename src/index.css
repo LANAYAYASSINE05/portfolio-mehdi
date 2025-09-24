@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+    background-color: #121212; /* Gris anthracite - look moderne façon dashboard/analytics */
+    color: #E0E0E0; /* Gris clair - look moderne façon dashboard/analytics */
+    min-height: 100vh;
+  }
+  
+  /* Scrollbar personnalisée pour le look dashboard */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #00B4D8;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9EF01A;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white font-medium px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm sm:text-base;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 text-sm sm:text-base;
+  }
+  
+  .section-padding {
+    @apply py-12 sm:py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .skill-bar {
+    @apply w-full bg-secondary rounded-full h-2 sm:h-2.5;
+  }
+  
+  .skill-progress {
+    @apply bg-gradient-to-r from-primary to-accent h-2 sm:h-2.5 rounded-full transition-all duration-1000 ease-out;
+  }
+  
+  /* Mobile-first responsive utilities */
+  .text-responsive-xl {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+  
+  .text-responsive-base {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  .spacing-responsive {
+    @apply space-y-4 sm:space-y-6 md:space-y-8;
+  }
+  
+  .grid-responsive {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8;
+  }
+  
+  /* Enhanced mobile responsiveness */
+  .mobile-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .mobile-text {
+    @apply text-sm sm:text-base;
+  }
+  
+  .mobile-heading {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+  
+  .mobile-spacing {
+    @apply space-y-3 sm:space-y-4 md:space-y-6;
+  }
+  
+  /* Dashboard/Analytics specific styles */
+  .dashboard-card {
+    @apply bg-gray-900/50 border border-gray-800 rounded-xl p-4 sm:p-6 backdrop-blur-sm;
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.8) 0%, rgba(26, 26, 26, 0.6) 100%);
+    border: 1px solid rgba(224, 224, 224, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dashboard-card:hover {
+    border-color: rgba(0, 180, 216, 0.3);
+    box-shadow: 0 10px 15px -3px rgba(0, 180, 216, 0.1), 0 4px 6px -2px rgba(0, 180, 216, 0.1);
+  }
+  
+  .metric-card {
+    @apply bg-gradient-to-br from-gray-900/80 to-gray-800/60 border border-gray-700 rounded-lg p-3 sm:p-4 backdrop-blur-sm;
+    border: 1px solid rgba(158, 240, 26, 0.2);
+  }
+  
+  .metric-card:hover {
+    border-color: rgba(158, 240, 26, 0.4);
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(26, 26, 26, 0.7) 100%);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, #00B4D8 0%, #9EF01A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.3);
+  }
+  
+  .glow-effect-accent {
+    box-shadow: 0 0 20px rgba(158, 240, 26, 0.3);
+  }
+}
