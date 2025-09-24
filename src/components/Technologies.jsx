@@ -8,7 +8,7 @@ const Technologies = () => {
       case 'meta':
         return (
           <img 
-            src="/src/assets/meta.png" 
+            src="/assets/meta.png" 
             alt="Meta" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -27,7 +27,7 @@ const Technologies = () => {
       case 'tiktok':
         return (
           <img 
-            src="/src/assets/tiktok.png" 
+            src="/assets/tiktok.png" 
             alt="TikTok" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -43,7 +43,7 @@ const Technologies = () => {
       case 'canva':
         return (
           <img 
-            src="/src/assets/canva.png" 
+            src="/assets/canva.png" 
             alt="Canva" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -53,7 +53,7 @@ const Technologies = () => {
       case 'capcut':
         return (
           <img 
-            src="/src/assets/capcut.png" 
+            src="/assets/capcut.png" 
             alt="CapCut" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -63,7 +63,7 @@ const Technologies = () => {
       case 'photoshop':
         return (
           <img 
-            src="/src/assets/photoshop.png" 
+            src="/assets/photoshop.png" 
             alt="Photoshop" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -79,7 +79,7 @@ const Technologies = () => {
       case 'elementor':
         return (
           <img 
-            src="/src/assets/elemenator.png" 
+            src="/assets/elemenator.png" 
             alt="Elementor" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -89,7 +89,7 @@ const Technologies = () => {
       case 'office':
         return (
           <img 
-            src="/src/assets/office.png" 
+            src="/assets/office.png" 
             alt="Microsoft Office" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -99,7 +99,7 @@ const Technologies = () => {
       case 'chatgpt':
         return (
           <img 
-            src="/src/assets/chatgpt.png" 
+            src="/assets/chatgpt.png" 
             alt="ChatGPT" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -109,7 +109,7 @@ const Technologies = () => {
       case 'gemini':
         return (
           <img 
-            src="/src/assets/gemini.png" 
+            src="/assets/gemini.png" 
             alt="Gemini" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -119,7 +119,7 @@ const Technologies = () => {
       case 'midjourney':
         return (
           <img 
-            src="/src/assets/midjourney.png" 
+            src="/assets/midjourney.png" 
             alt="Midjourney" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -129,7 +129,7 @@ const Technologies = () => {
       case 'copyai':
         return (
           <img 
-            src="/src/assets/copy ia.png" 
+            src="/assets/copy ia.png" 
             alt="Copy.ai" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -139,7 +139,7 @@ const Technologies = () => {
       case 'adcreative':
         return (
           <img 
-            src="/src/assets/adcreative ia.png" 
+            src="/assets/adcreative ia.png" 
             alt="AdCreative.ai" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -149,7 +149,7 @@ const Technologies = () => {
       case 'brandwatch':
         return (
           <img 
-            src="/src/assets/brandwatch.png" 
+            src="/assets/brandwatch.png" 
             alt="Brandwatch" 
             width={iconProps.width} 
             height={iconProps.height}
@@ -159,7 +159,7 @@ const Technologies = () => {
       case 'gamma':
         return (
           <img 
-            src="/src/assets/gamma app.png" 
+            src="/assets/gamma app.png" 
             alt="Gamma.app" 
             width={iconProps.width} 
             height={iconProps.height}

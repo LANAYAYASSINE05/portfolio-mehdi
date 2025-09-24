@@ -27,7 +27,7 @@ const Projects = () => {
         { metric: "17 353", label: "Nouveaux Abonnés Instagram", description: "Création de Communauté : Le travail a permis de transformer l'intérêt en adhésion durable, avec 17 353 nouveaux abonnés sur Instagram et 15 700 suivis sur Facebook, renforçant la communauté Haier." }
       ],
       technologies: ["Meta Ads", "Facebook", "Instagram", "Sponsoring", "FRMF"],
-      image: "/src/assets/haier img.jpg",
+      image: "/assets/haier img.jpg",
       link: "#"
     },
     {
@@ -45,7 +45,7 @@ const Projects = () => {
         { metric: "17.3 MAD", label: "CPL Google Ads", description: "CPL moyen de 17,3 MAD, inférieur à la moyenne du marché (20-25 MAD). Optimisation des enchères → réduction CPC de 4,1 à 3,4 MAD (-17%)." }
       ],
       technologies: ["Google Ads", "Meta Ads", "A/B Testing", "Tracking", "WhatsApp"],
-      image: "/src/assets/residences du golf.jpeg.jpg",
+      image: "/assets/residences du golf.jpeg.jpg",
       link: "#"
     },
     {
@@ -63,7 +63,7 @@ const Projects = () => {
         { metric: "6.2M", label: "Vues Cumulées", description: "Puissance Vidéo : Plus de 6,2M vues cumulées (4,4M sur Facebook et 1,8M sur Instagram), avec des pics dépassant 1M de vues par jour lors de l'ouverture." }
       ],
       technologies: ["Meta Ads", "Facebook", "Instagram", "A/B Testing", "Video Marketing"],
-      image: "/src/assets/Medina Mall Saidia.jpg",
+      image: "/assets/Medina Mall Saidia.jpg",
       link: "#"
     },
     {
@@ -80,7 +80,7 @@ const Projects = () => {
         { metric: "Juventus", label: "Partenariat Sportif", description: "Sponsoring Stratégique : Négociation et gestion du partenariat régional avec Juventus, associant la marque à des valeurs de performance et d'excellence." }
       ],
       technologies: ["Campaign Execution", "Media Buying", "Traffic Management", "Performance Optimization", "Screenshots Tracking"],
-      image: "/src/assets/Ariston.jpg",
+      image: "/assets/Ariston.jpg",
       link: "#"
     }
   ]
@@ -385,10 +385,10 @@ const Projects = () => {
                 >
                   <motion.a
                     href={
-                      project.id === 1 ? "/src/uploads/Haier Morocco × FRMF.pdf" :
-                      project.id === 2 ? "/src/uploads/Résidences du Golf.pdf" :
-                      project.id === 3 ? "/src/uploads/Medina Mall Saidia.pdf" :
-                      project.id === 4 ? "/src/uploads/ARISTON.pdf" :
+                      project.id === 1 ? "/uploads/Haier Morocco × FRMF.pdf" :
+                      project.id === 2 ? "/uploads/Résidences du Golf.pdf" :
+                      project.id === 3 ? "/uploads/Medina Mall Saidia.pdf" :
+                      project.id === 4 ? "/uploads/ARISTON.pdf" :
                       "#"
                     }
                     target="_blank"
@@ -411,10 +411,10 @@ const Projects = () => {
                   </motion.a>
                   <motion.a
                     href={
-                      project.id === 1 ? "/src/uploads/Haier Morocco × FRMF.pdf" :
-                      project.id === 2 ? "/src/uploads/Résidences du Golf.pdf" :
-                      project.id === 3 ? "/src/uploads/Medina Mall Saidia.pdf" :
-                      project.id === 4 ? "/src/uploads/ARISTON.pdf" :
+                      project.id === 1 ? "/uploads/Haier Morocco × FRMF.pdf" :
+                      project.id === 2 ? "/uploads/Résidences du Golf.pdf" :
+                      project.id === 3 ? "/uploads/Medina Mall Saidia.pdf" :
+                      project.id === 4 ? "/uploads/ARISTON.pdf" :
                       "#"
                     }
                     download={

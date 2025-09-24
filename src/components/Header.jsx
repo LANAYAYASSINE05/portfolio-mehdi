@@ -38,7 +38,7 @@ const Header = () => {
   const handleDownloadCV = () => {
     // Create a temporary link to download CV
     const link = document.createElement('a')
-    link.href = '/src/uploads/RHANIM MEHDI CV.pdf'
+    link.href = '/uploads/RHANIM MEHDI CV.pdf'
     link.download = 'RHANIM_MEHDI_CV.pdf'
     document.body.appendChild(link)
     link.click()

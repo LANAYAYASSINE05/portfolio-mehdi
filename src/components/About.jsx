@@ -39,7 +39,7 @@ const About = () => {
             >
                 {/* Profile Image */}
                 <motion.img
-                  src="/src/assets/profil.png"
+                  src="/assets/profil.png"
                   alt="Rhanim Mehdi"
                   className="w-full h-full object-cover rounded-full"
                   initial={{ opacity: 0, scale: 0.5 }}
