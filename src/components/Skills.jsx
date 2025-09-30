@@ -148,10 +148,10 @@ const Skills = () => {
 
         {/* Skills Grid */}
         <div className="mb-16">
-          {/* Hard Skills Section */}
-          <div className="mb-12 lg:mb-8">
+          {/* Titles Row - Desktop côte à côte, Mobile séparés */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-8">
             <motion.h3
-              className="text-2xl font-bold text-text flex items-center mb-8"
+              className="text-2xl font-bold text-text flex items-center"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -165,7 +165,25 @@ const Skills = () => {
               Hard Skills
             </motion.h3>
             
-            {/* Hard Skills Content */}
+            <motion.h3
+              className="text-2xl font-bold text-text flex items-center"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-3">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              Soft Skills
+            </motion.h3>
+          </div>
+          
+          {/* Content Row - Desktop côte à côte, Mobile séparés */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Hard Skills */}
             <motion.div
               className="space-y-6"
               initial={{ opacity: 0, x: -50 }}
@@ -206,26 +224,8 @@ const Skills = () => {
                 </motion.div>
               ))}
             </motion.div>
-          </div>
 
-          {/* Soft Skills Section */}
-          <div className="mb-12 lg:mb-8">
-            <motion.h3
-              className="text-2xl font-bold text-text flex items-center mb-8"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-3">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              Soft Skills
-            </motion.h3>
-            
-            {/* Soft Skills Content */}
+            {/* Soft Skills */}
             <motion.div
               className="space-y-6"
               initial={{ opacity: 0, x: 50 }}
