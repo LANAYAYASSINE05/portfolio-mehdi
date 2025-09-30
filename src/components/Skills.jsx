@@ -148,10 +148,10 @@ const Skills = () => {
 
         {/* Skills Grid */}
         <div className="mb-16">
-          {/* Titles Row */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-8">
+          {/* Hard Skills Section */}
+          <div className="mb-12 lg:mb-8">
             <motion.h3
-              className="text-2xl font-bold text-text flex items-center"
+              className="text-2xl font-bold text-text flex items-center mb-8"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -165,8 +165,53 @@ const Skills = () => {
               Hard Skills
             </motion.h3>
             
+            {/* Hard Skills Content */}
+            <motion.div
+              className="space-y-6"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              {hardSkills.map((skill, index) => (
+                <motion.div
+                  key={skill.title}
+                  className="dashboard-card group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ 
+                    scale: 1.02,
+                    boxShadow: "0 10px 25px rgba(108, 99, 255, 0.1)"
+                  }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <motion.div
+                      className="text-3xl"
+                      whileHover={{ scale: 1.2, rotate: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {skill.icon}
+                    </motion.div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
+                        {skill.title}
+                      </h4>
+                      <p className="text-text-light leading-relaxed">
+                        {skill.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Soft Skills Section */}
+          <div className="mb-12 lg:mb-8">
             <motion.h3
-              className="text-2xl font-bold text-text flex items-center"
+              className="text-2xl font-bold text-text flex items-center mb-8"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -179,54 +224,8 @@ const Skills = () => {
               </div>
               Soft Skills
             </motion.h3>
-          </div>
-          
-          {/* Content Row */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Hard Skills */}
-            <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-
-            {hardSkills.map((skill, index) => (
-              <motion.div
-                key={skill.title}
-                className="dashboard-card group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0 10px 25px rgba(108, 99, 255, 0.1)"
-                }}
-              >
-                <div className="flex items-start space-x-4">
-                  <motion.div
-                    className="text-3xl"
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {skill.icon}
-                  </motion.div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
-                      {skill.title}
-                    </h4>
-                    <p className="text-text-light leading-relaxed">
-                      {skill.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-            {/* Soft Skills */}
+            
+            {/* Soft Skills Content */}
             <motion.div
               className="space-y-6"
               initial={{ opacity: 0, x: 50 }}
