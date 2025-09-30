@@ -148,10 +148,10 @@ const Skills = () => {
 
         {/* Skills Grid */}
         <div className="mb-16">
-          {/* Titles Row - Desktop côte à côte, Mobile séparés */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-8">
+          {/* Desktop Layout - Titres côte à côte */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-12 mb-8">
             <motion.h3
-              className="text-2xl font-bold text-text flex items-center mb-6 lg:mb-0"
+              className="text-2xl font-bold text-text flex items-center"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -166,7 +166,7 @@ const Skills = () => {
             </motion.h3>
             
             <motion.h3
-              className="text-2xl font-bold text-text flex items-center mb-6 lg:mb-0"
+              className="text-2xl font-bold text-text flex items-center"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -181,11 +181,11 @@ const Skills = () => {
             </motion.h3>
           </div>
           
-          {/* Content Row - Desktop côte à côte, Mobile séparés */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Desktop Content - Côte à côte */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Hard Skills */}
             <motion.div
-              className="space-y-6 mb-8 lg:mb-0"
+              className="space-y-6"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -204,19 +204,19 @@ const Skills = () => {
                     boxShadow: "0 10px 25px rgba(108, 99, 255, 0.1)"
                   }}
                 >
-                  <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex items-start space-x-4">
                     <motion.div
-                      className="text-2xl sm:text-3xl flex-shrink-0"
+                      className="text-3xl"
                       whileHover={{ scale: 1.2, rotate: 5 }}
                       transition={{ duration: 0.2 }}
                     >
                       {skill.icon}
                     </motion.div>
-                    <div className="min-w-0 flex-1">
-                      <h4 className="text-lg sm:text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
+                    <div>
+                      <h4 className="text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
                         {skill.title}
                       </h4>
-                      <p className="text-sm sm:text-base text-text-light leading-relaxed">
+                      <p className="text-text-light leading-relaxed">
                         {skill.description}
                       </p>
                     </div>
@@ -246,19 +246,19 @@ const Skills = () => {
                     boxShadow: "0 10px 25px rgba(108, 99, 255, 0.1)"
                   }}
                 >
-                  <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex items-start space-x-4">
                     <motion.div
-                      className="text-2xl sm:text-3xl flex-shrink-0"
+                      className="text-3xl"
                       whileHover={{ scale: 1.2, rotate: 5 }}
                       transition={{ duration: 0.2 }}
                     >
                       {skill.icon}
                     </motion.div>
-                    <div className="min-w-0 flex-1">
-                      <h4 className="text-lg sm:text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
+                    <div>
+                      <h4 className="text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
                         {skill.title}
                       </h4>
-                      <p className="text-sm sm:text-base text-text-light leading-relaxed">
+                      <p className="text-text-light leading-relaxed">
                         {skill.description}
                       </p>
                     </div>
@@ -266,6 +266,127 @@ const Skills = () => {
                 </motion.div>
               ))}
             </motion.div>
+          </div>
+
+          {/* Mobile Layout - Sections séparées */}
+          <div className="lg:hidden space-y-12">
+            {/* Hard Skills Section Mobile */}
+            <div>
+              <motion.h3
+                className="text-2xl font-bold text-text flex items-center mb-8"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                Hard Skills
+              </motion.h3>
+              
+              <motion.div
+                className="space-y-6"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                {hardSkills.map((skill, index) => (
+                  <motion.div
+                    key={skill.title}
+                    className="dashboard-card group"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ 
+                      scale: 1.02,
+                      boxShadow: "0 10px 25px rgba(108, 99, 255, 0.1)"
+                    }}
+                  >
+                    <div className="flex items-start space-x-3">
+                      <motion.div
+                        className="text-2xl flex-shrink-0"
+                        whileHover={{ scale: 1.2, rotate: 5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {skill.icon}
+                      </motion.div>
+                      <div className="min-w-0 flex-1">
+                        <h4 className="text-lg font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
+                          {skill.title}
+                        </h4>
+                        <p className="text-sm text-text-light leading-relaxed">
+                          {skill.description}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Soft Skills Section Mobile */}
+            <div>
+              <motion.h3
+                className="text-2xl font-bold text-text flex items-center mb-8"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                Soft Skills
+              </motion.h3>
+              
+              <motion.div
+                className="space-y-6"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                {softSkills.map((skill, index) => (
+                  <motion.div
+                    key={skill.title}
+                    className="dashboard-card group"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ 
+                      scale: 1.02,
+                      boxShadow: "0 10px 25px rgba(108, 99, 255, 0.1)"
+                    }}
+                  >
+                    <div className="flex items-start space-x-3">
+                      <motion.div
+                        className="text-2xl flex-shrink-0"
+                        whileHover={{ scale: 1.2, rotate: 5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {skill.icon}
+                      </motion.div>
+                      <div className="min-w-0 flex-1">
+                        <h4 className="text-lg font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
+                          {skill.title}
+                        </h4>
+                        <p className="text-sm text-text-light leading-relaxed">
+                          {skill.description}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
           </div>
         </div>
 
