@@ -151,7 +151,7 @@ const Skills = () => {
           {/* Titles Row - Desktop côte à côte, Mobile séparés */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-8">
             <motion.h3
-              className="text-2xl font-bold text-text flex items-center"
+              className="text-2xl font-bold text-text flex items-center mb-6 lg:mb-0"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -166,7 +166,7 @@ const Skills = () => {
             </motion.h3>
             
             <motion.h3
-              className="text-2xl font-bold text-text flex items-center"
+              className="text-2xl font-bold text-text flex items-center mb-6 lg:mb-0"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -185,7 +185,7 @@ const Skills = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Hard Skills */}
             <motion.div
-              className="space-y-6"
+              className="space-y-6 mb-8 lg:mb-0"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -204,19 +204,19 @@ const Skills = () => {
                     boxShadow: "0 10px 25px rgba(108, 99, 255, 0.1)"
                   }}
                 >
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
                     <motion.div
-                      className="text-3xl"
+                      className="text-2xl sm:text-3xl flex-shrink-0"
                       whileHover={{ scale: 1.2, rotate: 5 }}
                       transition={{ duration: 0.2 }}
                     >
                       {skill.icon}
                     </motion.div>
-                    <div>
-                      <h4 className="text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
+                    <div className="min-w-0 flex-1">
+                      <h4 className="text-lg sm:text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
                         {skill.title}
                       </h4>
-                      <p className="text-text-light leading-relaxed">
+                      <p className="text-sm sm:text-base text-text-light leading-relaxed">
                         {skill.description}
                       </p>
                     </div>
@@ -246,19 +246,19 @@ const Skills = () => {
                     boxShadow: "0 10px 25px rgba(108, 99, 255, 0.1)"
                   }}
                 >
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
                     <motion.div
-                      className="text-3xl"
+                      className="text-2xl sm:text-3xl flex-shrink-0"
                       whileHover={{ scale: 1.2, rotate: 5 }}
                       transition={{ duration: 0.2 }}
                     >
                       {skill.icon}
                     </motion.div>
-                    <div>
-                      <h4 className="text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
+                    <div className="min-w-0 flex-1">
+                      <h4 className="text-lg sm:text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
                         {skill.title}
                       </h4>
-                      <p className="text-text-light leading-relaxed">
+                      <p className="text-sm sm:text-base text-text-light leading-relaxed">
                         {skill.description}
                       </p>
                     </div>
